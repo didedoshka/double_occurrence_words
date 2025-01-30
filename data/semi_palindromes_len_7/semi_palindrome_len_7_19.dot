@@ -1,0 +1,23 @@
+digraph {
+fontname="Helvetica"
+node [fontname="Helvetica"]
+node [shape=diamond]
+label="1 2 1 3 4 5 6 2 3 4 5 7 6 7 \nA double occurrence word\nAlready in ascending order\nPalindrome: yes\nSemi-palindrome: yes\nIrreducible: yes\nStrongly-irreducible: yes\nAssembly number: 1\nEdges in Hamiltonion set of polygonal paths: 0 2 4 6 8 10 \nRealizable\n"
+a [style="invis"]
+b [style="invis"]
+a:s -> 1:n
+1:s -> 2:n [color="blue"]
+2:s -> 1:w
+1:e -> 3:n [color="blue"]
+3:s -> 4:n
+4:s -> 5:n [color="blue"]
+5:s -> 6:n
+6:s -> 2:e [color="blue"]
+2:w -> 3:w
+3:e -> 4:e [color="blue"]
+4:w -> 5:w
+5:e -> 7:n [color="blue"]
+7:s -> 6:e
+6:w -> 7:w
+7:e -> b:n
+}

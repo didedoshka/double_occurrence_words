@@ -1,0 +1,15 @@
+digraph {
+fontname="Helvetica"
+node [fontname="Helvetica"]
+node [shape=diamond]
+label="1 1 2 2 3 3 \nA double occurrence word\nAlready in ascending order\nPalindrome: yes\nSemi-palindrome: yes\nIrreducible: no\nStrongly-irreducible: no\nAssembly number: 1\nRealizable\n"
+a [style="invis"]
+b [style="invis"]
+a:s -> 1:n
+1:s -> 1:w
+1:e -> 2:n
+2:s -> 2:e
+2:w -> 3:n
+3:s -> 3:w
+3:e -> b:n
+}
