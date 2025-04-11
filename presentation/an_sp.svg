@@ -1,0 +1,122 @@
+<svg width="570" height="816" viewBox="0.00 0.00 692 178.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="translate(9.334639468152744,172.3437261370812) scale(0.9619274546647747)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-174.98 688,-174.98 688,4 -4,4"/>
+<text text-anchor="middle" x="342" y="-8.2" font-family="Helvetica,sans-Serif" font-size="14.00">1 1 2 3 4 2 5 3 4 5 6 6</text>
+<!-- 1 -->
+<!-- 2 -->
+<g id="node3" class="node">
+<title>1</title>
+<polygon fill="none" stroke="black" points="117,-78.8 90,-60.8 117,-42.8 144,-60.8 117,-78.8"/>
+<text text-anchor="middle" x="117" y="-56.6" font-family="Helvetica,sans-Serif" font-size="14.00">1</text>
+</g>
+<!-- 1&#45;&#45;2 -->
+<g id="edge1" class="edge">
+<title>a:e-&gt;1:w</title>
+<path fill="none" stroke="black" d="M54,-60.8C65.38,-60.8 70.68,-60.8 78.55,-60.8"/>
+<polygon fill="black" stroke="black" points="78.49,-64.3 88.49,-60.8 78.49,-57.3 78.49,-64.3"/>
+</g>
+<!-- 3 -->
+<!-- 2&#45;&#45;3 -->
+<g id="edge2" class="edge">
+<title>1:e-&gt;1:s</title>
+<path fill="none" stroke="black" d="M144.81,-60.8C167.31,-48.8 167.31,-24.8 130.91,-24.8 101.61,-24.8 95.89,-32.57 106.49,-38.56"/>
+<polygon fill="black" stroke="black" points="104.99,-41.74 115.58,-41.95 107.43,-35.18 104.99,-41.74"/>
+</g>
+<!-- 4 -->
+<g id="node4" class="node">
+<title>2</title>
+<polygon fill="none" stroke="black" points="207,-96.8 180,-78.8 207,-60.8 234,-78.8 207,-96.8"/>
+<text text-anchor="middle" x="207" y="-74.6" font-family="Helvetica,sans-Serif" font-size="14.00">2</text>
+</g>
+<!-- 2&#45;&#45;4 -->
+<g id="edge3" class="edge">
+<title>1:n-&gt;2:w</title>
+<path fill="none" stroke="blue" d="M117,-80.12C117,-104.41 143.32,-85.58 168.57,-80.15"/>
+<polygon fill="blue" stroke="blue" points="168.98,-83.63 178.5,-78.98 168.16,-76.67 168.98,-83.63"/>
+</g>
+<!-- 5 -->
+<g id="node5" class="node">
+<title>3</title>
+<polygon fill="none" stroke="black" points="297,-96.8 270,-78.8 297,-60.8 324,-78.8 297,-96.8"/>
+<text text-anchor="middle" x="297" y="-74.6" font-family="Helvetica,sans-Serif" font-size="14.00">3</text>
+</g>
+<!-- 2&#45;&#45;4 -->
+<g id="edge4" class="edge">
+<title>2:e-&gt;3:w</title>
+<path fill="none" stroke="black" d="M234,-78.8C245.38,-78.8 250.68,-78.8 258.55,-78.8"/>
+<polygon fill="black" stroke="black" points="258.49,-82.3 268.49,-78.8 258.49,-75.3 258.49,-82.3"/>
+</g>
+<!-- 4 -->
+<g id="node7" class="node">
+<title>5</title>
+<polygon fill="none" stroke="black" points="477,-78.8 450,-60.8 477,-42.8 504,-60.8 477,-78.8"/>
+<text text-anchor="middle" x="477" y="-56.6" font-family="Helvetica,sans-Serif" font-size="14.00">5</text>
+</g>
+<!-- 3&#45;&#45;4 -->
+<g id="edge7" class="edge">
+<title>2:s-&gt;5:w</title>
+<path fill="none" stroke="blue" d="M207,-59.48C207,-35.14 383.14,-56.8 438.66,-60.33"/>
+<polygon fill="blue" stroke="blue" points="438.35,-63.82 448.49,-60.74 438.64,-56.83 438.35,-63.82"/>
+</g>
+<!-- 3&#45;&#45;4 -->
+<g id="node6" class="node">
+<title>4</title>
+<polygon fill="none" stroke="black" points="387,-124.8 360,-106.8 387,-88.8 414,-106.8 387,-124.8"/>
+<text text-anchor="middle" x="387" y="-102.6" font-family="Helvetica,sans-Serif" font-size="14.00">4</text>
+</g>
+<!-- 4&#45;&#45;1 -->
+<g id="edge5" class="edge">
+<title>3:e-&gt;4:w</title>
+<path fill="none" stroke="blue" d="M324,-78.8C339.52,-78.8 340.5,-95.21 349.2,-102.91"/>
+<polygon fill="blue" stroke="blue" points="347.98,-106.19 358.58,-106.29 350.36,-99.6 347.98,-106.19"/>
+</g>
+<!-- b -->
+<g id="edge9" class="edge">
+<title>3:n-&gt;4:n</title>
+<path fill="none" stroke="black" d="M297,-98.12C297,-100.02 358.14,-124.7 360,-125.12 365.4,-126.33 371.56,-129.19 376.63,-130.75"/>
+<polygon fill="black" stroke="black" points="377.91,-134.01 385.62,-126.74 375.06,-127.61 377.91,-134.01"/>
+</g>
+<!-- 4&#45;&#45;b -->
+<g id="edge6" class="edge">
+<title>4:e-&gt;2:n</title>
+<path fill="none" stroke="black" d="M415.81,-106.8C423.83,-106.8 420.63,-119.29 414.81,-124.8 350.07,-186.04 218.91,-190.92 207.76,-109.6"/>
+<polygon fill="black" stroke="black" points="211.25,-109.38 207.1,-99.63 204.27,-109.84 211.25,-109.38"/>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g id="edge10" class="edge">
+<title>4:s-&gt;5:s</title>
+<path fill="none" stroke="blue" d="M387,-87.48C387,-74.22 402.95,-82.12 414,-74.8 431.92,-62.92 430.07,-50.54 450,-42.48 455.31,-40.33 461.69,-37.28 466.91,-35.97"/>
+<polygon fill="blue" stroke="blue" points="465.22,-39.03 475.67,-40.75 468.57,-32.89 465.22,-39.03"/>
+</g>
+<!-- 5&#45;&gt;3 -->
+<g id="edge8" class="edge">
+<title>5:e-&gt;3:s</title>
+<path fill="none" stroke="black" d="M505.81,-60.8C513.83,-60.8 510.63,-73.29 504.81,-78.8 487.12,-95.54 474.3,-80.56 450,-78.8 393.56,-74.72 380.36,-65.61 324,-60.48 318.67,-59.99 312.74,-57.36 307.79,-55.65"/>
+<polygon fill="black" stroke="black" points="306.68,-52.33 298.43,-58.97 309.02,-58.93 306.68,-52.33"/>
+</g>
+<!-- 6 -->
+<g id="node8" class="node">
+<title>6</title>
+<polygon fill="none" stroke="black" points="567,-96.8 540,-78.8 567,-60.8 594,-78.8 567,-96.8"/>
+<text text-anchor="middle" x="567" y="-74.6" font-family="Helvetica,sans-Serif" font-size="14.00">6</text>
+</g>
+<!-- 5&#45;&gt;6 -->
+<g id="edge11" class="edge">
+<title>5:n-&gt;6:w</title>
+<path fill="none" stroke="black" d="M477,-80.12C477,-104.41 503.32,-85.58 528.57,-80.15"/>
+<polygon fill="black" stroke="black" points="528.98,-83.63 538.5,-78.98 528.16,-76.67 528.98,-83.63"/>
+</g>
+<!-- 6&#45;&gt;b -->
+<g id="edge13" class="edge">
+<title>6:s-&gt;b:w</title>
+<path fill="none" stroke="rgb(0, 0, 255)" d="M567,-59.48C567,-35.19 593.32,-54.02 618.57,-59.45"/>
+<polygon fill="blue" stroke="blue" points="618.16,-62.93 628.5,-60.62 618.98,-55.97 618.16,-62.93"/>
+</g>
+<!-- 6&#45;&gt;6 -->
+<g id="edge12" class="edge">
+<title>6:e-&gt;6:n</title>
+<path fill="none" stroke="black" d="M594.81,-78.8C617.31,-90.8 617.31,-114.8 580.91,-114.8 551.61,-114.8 545.89,-107.03 556.49,-101.04"/>
+<polygon fill="black" stroke="black" points="557.43,-104.42 565.58,-97.65 554.99,-97.86 557.43,-104.42"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,86 @@
+<svg width="570" height="816" viewBox="0.00 0.00 512 98.16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="translate(-2.398506733807743,94.80059508118708) scale(0.8452854359894393)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-94.16 508,-94.16 508,4 -4,4"/>
+<!-- 1 -->
+<g id="node1" class="node">
+<title>a</title>
+<polygon fill="none" stroke="black" points="27,-58.84 0,-40.84 27,-22.84 54,-40.84 27,-58.84"/>
+<text text-anchor="middle" x="27" y="-36.64" font-family="Helvetica,sans-Serif" font-size="14.00">a</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node">
+<title>1</title>
+<polygon fill="none" stroke="black" points="117,-58.84 90,-40.84 117,-22.84 144,-40.84 117,-58.84"/>
+<text text-anchor="middle" x="117" y="-36.64" font-family="Helvetica,sans-Serif" font-size="14.00">1</text>
+</g>
+<!-- 1&#45;&#45;2 -->
+<g id="edge1" class="edge">
+<title>a:e--1:w</title>
+<path fill="none" stroke="black" d="M54,-40.84C70,-40.84 74,-40.84 90,-40.84"/>
+</g>
+<!-- 3 -->
+<g id="node3" class="node">
+<title>2</title>
+<polygon fill="none" stroke="black" points="207,-58.84 180,-40.84 207,-22.84 234,-40.84 207,-58.84"/>
+<text text-anchor="middle" x="207" y="-36.64" font-family="Helvetica,sans-Serif" font-size="14.00">2</text>
+</g>
+<!-- 2&#45;&#45;3 -->
+<g id="edge2" class="edge">
+<title>1:e--2:w</title>
+<path fill="none" stroke="rgb(0, 0, 0)" d="M144,-40.84C160,-40.84 164,-40.84 180,-40.84"/>
+</g>
+<!-- 4 -->
+<g id="edge6" class="edge">
+<title>1:n--2:n</title>
+<path fill="none" stroke="black" d="M117,-60.16C117,-100.16 207,-100.16 207,-60.16"/>
+</g>
+<!-- 2&#45;&#45;4 -->
+<g id="node4" class="node">
+<title>3</title>
+<polygon fill="none" stroke="black" points="297,-58.84 270,-40.84 297,-22.84 324,-40.84 297,-58.84"/>
+<text text-anchor="middle" x="297" y="-36.64" font-family="Helvetica,sans-Serif" font-size="14.00">3</text>
+</g>
+<!-- 5 -->
+<g id="edge3" class="edge">
+<title>2:e--3:w</title>
+<path fill="none" stroke="black" d="M234,-40.84C250,-40.84 254,-40.84 270,-40.84"/>
+</g>
+<!-- 2&#45;&#45;4 -->
+<g id="edge7" class="edge">
+<title>2:s--3:s</title>
+<path fill="none" stroke="rgb(0, 0, 0)" d="M207,-21.52C207,-11.52 297,-11.52 297,-21.52"/>
+</g>
+<!-- 4 -->
+<g id="node5" class="node">
+<title>4</title>
+<polygon fill="none" stroke="black" points="387,-58.84 360,-40.84 387,-22.84 414,-40.84 387,-58.84"/>
+<text text-anchor="middle" x="387" y="-36.64" font-family="Helvetica,sans-Serif" font-size="14.00">4</text>
+</g>
+<!-- 3&#45;&#45;4 -->
+<g id="edge4" class="edge">
+<title>3:e--4:w</title>
+<path fill="none" stroke="rgb(0, 0, 0)" d="M324,-40.84C340,-40.84 344,-40.84 360,-40.84"/>
+</g>
+<!-- 3&#45;&#45;4 -->
+<g id="edge8" class="edge">
+<title>3:n--4:n</title>
+<path fill="none" stroke="black" d="M297,-60.16C297,-100.16 387,-100.16 387,-60.16"/>
+</g>
+<!-- 4&#45;&#45;1 -->
+<g id="edge5" class="edge">
+<title>4:e--1:s</title>
+<path fill="none" stroke="black" d="M415.81,-40.84C434.95,-40.84 436.42,-95.58 360,-58.84 336.92,-47.75 347.08,-24.94 324,-13.84 266.32,13.88 243.88,-9.97 180,-13.84 151.84,-15.55 117,6.68 117,-21.52"/>
+</g>
+<!-- b -->
+<g id="node6" class="node">
+<title>b</title>
+<polygon fill="none" stroke="black" points="477,-40.84 450,-22.84 477,-4.84 504,-22.84 477,-40.84"/>
+<text text-anchor="middle" x="477" y="-18.64" font-family="Helvetica,sans-Serif" font-size="14.00">b</text>
+</g>
+<!-- 4&#45;&#45;b -->
+<g id="edge9" class="edge">
+<title>4:s--b:w</title>
+<path fill="none" stroke="black" d="M387,-21.52C387,6.48 421.99,-22.84 450,-22.84"/>
+</g>
+</g>
+</svg>

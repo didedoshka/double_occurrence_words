@@ -1,0 +1,39 @@
+<svg width="570" height="816" viewBox="0.00 0.00 161.00 221.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="translate(4,217.60000305175782) scale(1)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-217.6 157,-217.6 157,4 -4,4"/>
+<!-- a -->
+<!-- A -->
+<g id="node5" class="node">
+<title>A</title>
+<polygon fill="none" stroke="black" points="76,-124.8 49,-106.8 76,-88.8 103,-106.8 76,-124.8"/>
+<text text-anchor="middle" x="76" y="-102.6" font-family="Computer Modern" font-size="14.00">A</text>
+</g>
+<!-- a&#45;&#45;A -->
+<g id="edge1" class="edge">
+<title>a--A:n</title>
+<path fill="none" stroke="black" d="M60.72,-181.6C67.19,-167.87 76,-145.38 76,-124.8"/>
+<text text-anchor="middle" x="80.71" y="-147" font-family="Computer Modern" font-size="14.00">  1</text>
+</g>
+<!-- b -->
+<!-- b&#45;&#45;A -->
+<g id="edge3" class="edge">
+<title>b--A:e</title>
+<path fill="none" stroke="black" d="M128.6,-178.9C131.92,-153.65 134.14,-106.8 104.81,-106.8"/>
+<text text-anchor="middle" x="137.47" y="-147" font-family="Computer Modern" font-size="14.00">  2</text>
+</g>
+<!-- c -->
+<!-- d -->
+<!-- A&#45;&#45;c -->
+<g id="edge2" class="edge">
+<title>A:w--c</title>
+<path fill="none" stroke="black" d="M47.19,-106.8C17.94,-106.8 20.65,-59.95 24.23,-34.7"/>
+<text text-anchor="middle" x="29.33" y="-58.2" font-family="Computer Modern" font-size="14.00">  4</text>
+</g>
+<!-- A&#45;&#45;d -->
+<g id="edge4" class="edge">
+<title>A:s--d</title>
+<path fill="none" stroke="black" d="M76,-88.8C76,-68 85.32,-45.39 92.1,-31.71"/>
+<text text-anchor="middle" x="89.17" y="-58.2" font-family="Computer Modern" font-size="14.00">  3</text>
+</g>
+</g>
+</svg>

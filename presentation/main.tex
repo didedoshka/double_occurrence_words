@@ -1,0 +1,658 @@
+\documentclass[14pt, aspectratio=169, notheorems]{beamer}
+\usefonttheme[onlymath]{serif}
+
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[nottoc]{tocbibind}
+\usepackage[square,numbers]{natbib}
+\usepackage{svg}
+\usepackage{hyperref}
+
+\usepackage[nolists,nomarkers]{endfloat}
+
+\svgsetup{inkscapelatex=false}
+
+\theoremstyle{plain}
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}[theorem]{Лемма} 
+\newtheorem{proposition}[theorem]{Предложение}
+\newtheorem{corollary}[theorem]{Следствие}
+\newtheorem{claim}[theorem]{Утверждение}
+\newtheorem{algorithm}[theorem]{Алгоритм}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Определение}
+
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Пример}
+\newtheorem{examples}[theorem]{Примеры}
+\newtheorem{remark}[theorem]{Замечание}
+
+\newcommand{\An}{\operatorname{An}}
+
+% \usepackage[utf8]{inputenc}
+% \usepackage[T2A]{fontenc}
+% \usepackage[english,russian]{babel}
+% \usepackage{amsmath}
+% \usepackage{amsthm}
+% \usepackage{amsfonts}
+% \usepackage{stmaryrd,mathrsfs}
+% \usepackage{multicol}
+% \usepackage{wrapfig}
+% \usepackage{comment}
+% \usepackage{biblatex}
+% \usepackage[absolute,overlay]{textpos}
+% \usepackage{cmap}
+% \usepackage{hyperref}
+% \hypersetup{unicode=true}
+
+%%%%%%%%%%%%Style%%%%%%%%%%%%%%%%%%%
+
+\usetheme{Madrid}
+
+\definecolor{telegram}{RGB}{0, 136, 204}
+\definecolor{fedex}{RGB}{0, 153, 204}
+\definecolor{style_color}{RGB}{12, 121, 173}
+\definecolor{ems}{RGB}{65, 73, 179}
+\definecolor{algebra}{RGB}{204, 204, 153}
+\definecolor{vinous}{RGB}{204, 0, 51}
+
+\definecolor{blue-gray}{RGB}{96, 130, 182}
+\definecolor{red-gray}{RGB}{182, 96, 86}
+\definecolor{grayish_pink}{RGB}{182, 86, 124}
+\definecolor{green-gray}{RGB}{86,182,96}
+\definecolor{dark-blue-gray}{RGB}{72,97,137}
+
+\definecolor{BSU_green}{RGB}{24,128,110}
+\definecolor{BSU_green_dark}{RGB}{0,74,65}
+\definecolor{BSU_red}{RGB}{175,53,0}
+\definecolor{BSU_black}{RGB}{34,34,34}
+
+\definecolor{FCS_yellow}{RGB}{255,182,0}
+\definecolor{FCS_red}{RGB}{255,0,0}
+\definecolor{FCS_darkyellow}{RGB}{191, 137, 0}
+\definecolor{FCS_darkdarkyellow}{RGB}{128, 91, 0}
+
+\definecolor{dirblue}{RGB}{0, 90, 171}
+\definecolor{fknyellow}{RGB}{240, 192, 70}
+
+\definecolor{MSU_lightblue}{RGB}{142, 202, 230}
+\definecolor{MSU_blue}{RGB}{33, 158, 188}
+\definecolor{MSU_darkblue}{RGB}{2, 48, 71}
+\definecolor{MSU_yellow}{RGB}{255, 183, 3}
+\definecolor{MSU_orange}{RGB}{251, 133, 0}
+
+\definecolor{just_blue}{RGB}{66, 143, 204}
+\definecolor{just_orange}{RGB}{235, 95, 42}
+
+\definecolor{just_blue_new}{RGB}{0, 83, 187}
+\definecolor{just_orange_new}{RGB}{187, 0, 83}
+\definecolor{just_green_new}{RGB}{83, 187, 0}
+
+\definecolor{HSE_blue}{RGB}{15, 45, 105}
+
+\colorlet{beamer@blendedblue}{HSE_blue}
+%\setbeamercolor{normal text}{fg=BSU_black}
+
+\everymath{\color{just_orange_new}}
+\everydisplay{\color{just_orange_new}}
+
+\usefonttheme{structurebold}
+
+\usepackage[absolute,overlay]{textpos}
+
+\beamertemplatenavigationsymbolsempty
+
+%\setbeamersize{text margin left=5 mm,text margin right=5mm}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\newcommand{\acc}[1]{\textcolor{HSE_blue}{\bf #1}}
+
+\newcommand{\bibcolor}[1]{\textcolor{HSE_blue}{\bf #1}}
+
+\newcommand{\iiff}{\Longleftrightarrow}
+\newcommand{\nothing}{\varnothing}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+
+\newcommand{\cb}[1]{\textcolor{blue}{#1}}
+\newcommand{\cv}[1]{\textcolor{violet}{#1}}
+\newcommand{\cred}[1]{\textcolor{red}{#1}}
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\PGG}{\widetilde \Gamma_{p}(\FF^n)}
+\newcommand{\PG}{\Gamma_{p}(\FF^n)}
+\newcommand{\TG}{T_{p}(\FF^n)}
+\newcommand{\GN}{N_{p}(\FF^n)}
+\newcommand{\GA}{\Gamma_{A}(\FF^n)}
+\newcommand{\TA}{T_{A}(\FF^n)}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%%%%%%%%%%%%%%%Footline%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \makeatletter
+% \setbeamertemplate{footline}{
+%   \leavevmode%
+%   \hbox{%
+%   \begin{beamercolorbox}[wd=.0\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%     \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+%   \end{beamercolorbox}%
+%   \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%     \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+%   \end{beamercolorbox}%
+%   \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%     \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+%   \end{beamercolorbox}}%
+%   \vskip0pt%
+% }
+% \makeatother
+
+%\addtobeamertemplate{frametitle}{\emb}
+\setbeamercovered{transparent}
+
+\setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayshortskip}{-10pt}
+\setlength{\belowdisplayskip}{-10pt}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\title[Изучение свойств сборных графов]{Изучение свойств сборных графов – палиндромов и полупалиндромов}
+\subtitle{Assembly graphs that are palindromes and semi-palindromes, and their properties}
+\author[Дмитрий Горохов, БПМИ231]{Автор: Дмитрий Горохов, БПМИ231 \\ Научный руководитель: Максаев Артем Максимович, к. ф.-м. н.}
+\date{}
+
+\begin{document}
+
+\titlepage
+
+\begin{frame}{Цель и задачи}
+    Цель: \\ Провести теоретическое исследование по дискретной математике.
+    \\
+    
+    Задачи: 
+    \begin{itemize}
+        \item Изучить литературу по теме проекта, изучить основные свойства и характеристики сборных графов, свойства и факты про палиндромы.
+        \item Изучить класс полупалиндромов, их свойства и характеристики.
+        \item Определить, верно ли, что любой палиндром/полупалиндром реализуем (имеет сборное число 1)? В целом, исследовать теоретически и экспериментально сборные числа палиндромов и полупалиндромов. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Сборный граф}
+
+   \begin{definition}
+    Сборный граф --- конечный связный граф, в котором все вершины имеют степени $1$ или $4$, а также для каждой вершины на множестве ребер, инцидентных ей, определен порядок.
+    \end{definition} 
+    \begin{columns}
+        \column{0.25\textwidth} 
+        \centering
+        \includesvg[width=\linewidth]{order_edge}
+        \column{0.65\textwidth}
+        \centering
+        \includesvg[width=\linewidth]{graph_example_1}
+    \end{columns}
+     
+\end{frame}
+
+\begin{frame}{Пример сборного графа}
+    \centering
+    \includesvg[width=\linewidth]{example_2}
+\end{frame}
+
+\begin{frame}{Трансверсаль}
+    \begin{definition}
+    Трансверсаль $(v_0, e_1, v_1, e_2, \dots, e_n, v_n)$ --- путь, что каждая вершина встречается максимум два раза, все ребра различны, а ребра $e_i$ и $e_{i + 1}$ не являются соседними в $v_i$.
+    \end{definition}
+
+    \centering
+    \includesvg[width=0.8\linewidth]{transversal}
+\end{frame}
+
+\begin{frame}{Простой сборный граф}
+    \begin{definition}
+    Простой сборный граф --- сборный граф, содержащий эйлерову трансверсаль.
+    \end{definition} 
+    
+    \centering
+    \includesvg[width=0.8\linewidth]{simple_graph}
+\end{frame}
+
+\begin{frame}{2-слово}
+   \begin{definition}
+    Сборное слово или 2-слово --- это слово в некотором алфавите $S = \{a_1, a_2, \dots\}$, что каждая буква $a_i$ либо содержится в слове ровно два раза, либо не содержится вовсе.
+    \end{definition}
+
+    \begin{examples}
+        $1\ 2\ 3\ 4\ 1\ 2\ 3\ 4$; $2\ 2\ 3\ 4\ 4\ 3\ 1\ 1$ --- 2-слова на буквах $\{1, 2, 3, 4\}$.
+    \end{examples}
+\end{frame}
+
+\begin{frame}{Биективное соответствие}
+    \begin{lemma}
+    Классы эквивалентности 2-слов находятся в биективном соответствии с классами изоморфизма простых сборных графов.
+    \end{lemma}
+
+    2-слову $1\ 2\ 3\ 4\ 1\ 2\ 3\ 4$ соответствует данный простой сборный граф.
+    
+    \centering
+    \includesvg[width=0.8\linewidth]{simple_graph}
+\end{frame}
+
+\begin{frame}{Биективное соответствие}
+    \centering
+    \includesvg[width=0.8\linewidth]{12123434}
+    \includesvg[width=0.67\linewidth]{12132434}
+\end{frame}
+
+\begin{frame}{Порядок возрастания}
+    \begin{definition}
+    Слово записано в порядке возрастания, если каждая буква $v$ встречается первый раз только после того, как все буквы меньше $v$ уже встречались. 
+    \end{definition}
+
+    \begin{examples}
+    2-слова в порядке возрастания: $1\ 2\ 3\ 4\ 1\ 2\ 3\ 4$; $1\ 2\ 2\ 3\ 1\ 4\ 4\ 3$. \\
+    2-слова не в порядке возрастания: $2\ 1\ 1\ 2$; $1\ 3\ 2\ 2\ 3\ 1$. \\
+    Эквивалентные им 2-слова в порядке возрастания: $1\ 2\ 2\ 1$; $1\ 2\ 3\ 3\ 2\ 1$.
+    \end{examples}
+    
+    Далее мы отождествляем класс эквивалентности 2-слов с его представителем, записанным в порядке возрастания.
+\end{frame}
+
+\section{Комбинаторные характеристики}
+
+\begin{frame}{Количество 2-слов}
+    \begin{lemma}[\protect{\cite[J. Touchard, 1952]{article4}}]
+    Мощность множества 2-слов на $n$ буквах есть 
+    \[
+    W_n = (2n - 1)!!
+    \]
+    \end{lemma}
+\end{frame}
+
+\begin{frame}{Неразложимое 2-слово}
+    \begin{definition}
+    2-слово $w$ --- неразложимое, если оно не может быть записано как произведение $w = uv$ двух 2-слов $u, v$.
+    \end{definition}
+    \begin{examples}
+    $1\ 2\ 3\ 4\ 1\ 2\ 3\ 4$ --- неразложимое. \\
+    $1\ 2\ 2\ 1\ 3\ 4\ 4\ 3$ --- разложимое.
+    \end{examples}
+\end{frame}
+
+\begin{frame}{Количество неразложимых 2-слов}
+    \begin{lemma}[\protect{\cite[J. Burns, T. Muche, 2013]{article2}}]
+    Количество неразложимых 2-слов на $n$ буквах есть 
+    \begin{equation*}
+        I_1 = 1; 
+    \end{equation*}
+    \begin{equation*}
+        I_n = W_n - \sum_{k = 1}^{n - 1}W_kI_{n - k}
+    \end{equation*}
+    \end{lemma}
+\end{frame}
+
+\begin{frame}{Сильно-неразложимое 2-слово}
+    \begin{definition}
+    Сильно-неразложимое 2-слово --- такое 2-слово, что оно не содержит никакого собственного 2-подслова.
+    \end{definition}
+    \begin{remark}
+    Сильно-неразложимое 2-слово является неразложимым.
+    \end{remark}
+    \begin{examples}
+    $1\ 2\ 1\ 3\ 2\ 4\ 3\ 4$ --- сильно-неразложимое. \\
+    $1\ 2\ 3\ 3\ 2\ 1$ --- неразложимое, но сильно-разложимое.
+    \end{examples}
+\end{frame}
+
+\begin{frame}{Количество сильно-неразложимых 2-слов}
+    \begin{lemma}[\protect{\cite[R. R. Stein, 1978]{article5}}]
+    Количество сильно-неразложимых 2-слов на $n$ буквах есть 
+    \begin{equation*}
+        S_1 = 1;
+    \end{equation*}
+    \begin{equation*}
+        S_n = (n - 1) \sum_{i = 1}^{n - 1}S_i S_{n - i}
+    \end{equation*}
+    \end{lemma}
+\end{frame}
+
+
+\begin{frame}{Палиндром}
+   \begin{definition}
+    Палиндром --- 2-слово, равное своему обратному.
+    \end{definition}
+    \begin{example}
+    $v = 1\ 2\ 3\ 3\ 1\ 2$; $v^{R} = 2\ 1\ 3\ 3\ 2\ 1$. В возрастающем порядке $v^{R} = 1\ 2\ 3\ 3\ 1\ 2$. $v$ --- палиндром.
+    \end{example}
+    \begin{columns}
+        \column{0.45\textwidth} 
+        \centering
+        \includesvg[width=\linewidth]{palindrome_2}
+        \column{0.45\textwidth}
+        \centering
+        \includesvg[width=\linewidth]{palindrome_3}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Палиндром}
+   \begin{definition}
+    Палиндром --- 2-слово, равное своему обратному.
+    \end{definition}
+    \begin{example}
+    $w = 1\ 2\ 2\ 3\ 1\ 3$; $w^{R} = 3\ 1\ 3\ 2\ 2\ 1$. В возрастающем порядке $w^{R} = 1\ 2\ 1\ 3\ 3\ 2$. $w$ --- не палиндром. 
+    \end{example}
+
+    \centering
+    \includesvg[width=0.7\linewidth]{palindrome_1}
+\end{frame}
+
+\begin{frame}{Количество палиндромов}
+   \begin{lemma}[\protect{\cite[A. Stoimenow, 2000]{article6}}]
+    Количество палиндромов на $n$ буквах есть
+    \[
+    P_n = \sum_{k=\lfloor n/2 \rfloor}^{n} \binom{k}{n - k} \frac{n!}{k!}
+    \]
+    \end{lemma} 
+\end{frame}
+
+\begin{frame}{Количество неразложимых палиндромов}
+    \begin{lemma}[\protect{\cite[J. Burns, T. Muche, 2013]{article2}}]
+    Количество неразложимых палиндромов на $n$ буквах есть
+    \begin{equation*}
+        J_1 = 1;   
+    \end{equation*}
+    \begin{equation*}
+        J_n = P_n - \sum_{k = 1}^{\lfloor n / 2 \rfloor}W_kJ_{n - 2k}
+    \end{equation*}
+    \end{lemma} 
+\end{frame}
+
+
+\begin{frame}{Количество сильно-неразложимых палиндромов}
+    \begin{lemma}[\protect{\cite[R. R. Stein, 1978]{article5}}]
+    Количество сильно-неразложимых палиндромов на $n$ буквах есть 
+    \begin{equation*}
+        T_0 = -1; T_1 = 1; 
+    \end{equation*}
+    \begin{equation*}
+    T_n = (n - 1) \sum_{i = 1}^{n - 2}T_i T_{n - i} + \sum_{i = 1}^{\lfloor n / 2 \rfloor} (2n - 4i - 1)S_i T_{n - 2i}
+    \end{equation*}
+    \end{lemma}
+\end{frame}
+
+\begin{frame}{Полупалиндром}
+   \begin{definition}
+    2-слово $w$ на $n$ буквах в возрастающем порядке --- полупалиндром, если $\forall i \in \{1, \dots, 2n\}:  w_{2n - i + 1} = n - w_i + 1$.
+    \end{definition}
+    \begin{examples}
+    $1\ 1\ 2\ 2$; $1\ 2\ 1\ 2$ --- полупалиндромы.
+
+    $1\ 2\ 2\ 1$ --- палиндром, но не полупалиндром.
+    \end{examples}
+    \begin{columns}
+        \column{0.33\textwidth} 
+        \centering
+        \includesvg[width=\linewidth]{semipalindrome_1}
+        \column{0.33\textwidth}
+        \centering
+        \includesvg[width=\linewidth]{semipalindrome_2}
+        \column{0.33\textwidth}
+        \centering
+        \includesvg[width=0.66\linewidth]{semipalindrome_3}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Полупалиндром}
+   \begin{definition}
+    2-слово $w$ на $n$ буквах в возрастающем порядке --- полупалиндром, если $\forall i \in \{1, \dots, 2n\}:  w_{2n - i + 1} = n - w_i + 1$.
+    \end{definition}
+    \begin{remark}
+    Полупалиндром является палиндромом.
+    \end{remark}
+\end{frame}
+
+\begin{frame}{Биективность симметричным ПСП}
+    \begin{definition}
+        ПСП называется симметричной, если при развороте и замене закрывающих скобочек на открывающие, а открывающих на закрывающие получается она сама.
+    \end{definition}
+    \begin{proposition}
+    Множество полупалиндромов на $n$ буквах биективно множеству симметричных ПСП длины $2n$.
+    \end{proposition}
+\end{frame}
+
+\begin{frame}{Биективность симметричным ПСП}
+    Биективное отображение $f$ из множества симметричных ПСП в множество полупалиндромов таково: отдельно пронумеруем открывающиеся скобки в порядке возрастания, отдельно закрывающиеся в порядке возрастания и запишем это в строку. 
+    \begin{examples}
+       $1\ 1\ 2\ 2\ 3\ 3 \longleftrightarrow ()()()$; 
+       
+       $1\ 2\ 1\ 3\ 2\ 3 \longleftrightarrow (()())$;
+       
+       $1\ 2\ 3\ 1\ 2\ 3 \longleftrightarrow ((())) $ 
+    \end{examples}
+    Заметим, что скобки, которые при анализе ПСП разбиваются на пары ``открывающая-закрывающая'' не соответствуют парам букв.
+\end{frame}
+
+\begin{frame}{Биективность симметричным ПСП}
+    \begin{proposition}
+    Пусть $s$ --- префикс полупалиндрома. Тогда $s$ можно продолжить 
+    \begin{itemize}
+        \item единственным способом, если каждая буква встречается в $s$ дважды. Этот способ --- новая буква (следующая по возрастанию после наибольшей среди встречающихся).
+        \item двумя способами, если существует буква, которая встречается в $s$ один раз. Первый способ --- новая буква (следующая по возрастанию после наибольшей среди встречающихся). Второй способ --- наименьшая буква префикса, которая встречалась один раз.
+    \end{itemize}
+    \end{proposition}
+\end{frame}
+
+\begin{frame}{Количество полупалиндромов}
+    \begin{proposition}
+    Количество полупалиндромов на $n$ буквах есть $SP_n = \binom{n}{\lfloor \frac{n}{2} \rfloor}$.
+    \end{proposition}
+
+    Данная последовательность содержится в On-Line Encyclopedia of Integer Sequences с индексом A001405. 
+\end{frame}
+
+\begin{frame}{Связь неразложимых и сильно-неразложимых полупалиндромов}
+    \begin{proposition}
+    Количество неразложимых полупалиндромов на $n$ буквах равно количеству сильно-неразложимых полупалиндромов на $n$ буквах.
+    \end{proposition}
+    \begin{proposition}
+    Количество сильно-неразложимых (просто неразложимых) полупалиндромов на $n$ буквах есть $SPI_n = SP_{n-1} = \binom{n-1}{\lfloor \frac{n-1}{2} \rfloor}$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}{Таблицы}
+   \centering
+    \begin{tabular}{|l|l|l|l|}
+\hline
+$n$ & Все слова $W_n$ & Палиндромы $P_n$ & Полупалиндромы $SP_n$ \\
+\hline
+1 & 1 & 1 & 1 \\
+2 & 3 & 3 & 2 \\
+3 & 15 & 7 & 3 \\
+4 & 105 & 25 & 6 \\
+5 & 945 & 81 & 10 \\
+6 & 10395 & 331 & 20 \\
+7 & 135135 & 1303 & 35 \\
+8 & 2027025 & 5937 & 70 \\
+9 & 34459425 & 26785 & 126 \\
+10 & 654729075 & 133651 & 252 \\
+\hline
+OEIS & A001147 & A047974 & A001405 \\
+\hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Таблицы}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+$n$ & Неразл. $I_n$ & Неразл. палин. $J_n$ & Неразл. полупалин. $SPI_n$ \\
+\hline
+1 & 1 & 1 & 1 \\
+2 & 2 & 2 & 1 \\
+3 & 10 & 6 & 2 \\
+4 & 74 & 20 & 3 \\
+5 & 706 & 72 & 6 \\
+6 & 8162 & 290 & 10 \\
+7 & 110410 & 1198 & 20 \\
+8 & 1708394 & 5452 & 35 \\
+9 & 29752066 & 25176 & 70 \\
+10 & 576037442 & 125874 & 126 \\
+\hline
+OEIS & A000698 & A195186 & A001405 \\
+\hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Таблицы}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+$n$ & Сил.-нер. $S_n$ & Сил.-нер. пал. $T_n$ & Сил.-нер. полупал. $SPI_n$ \\
+\hline
+1 & 1 & 1 & 1 \\
+2 & 1 & 1 & 1 \\
+3 & 4 & 2 & 2 \\
+4 & 27 & 7 & 3 \\
+5 & 248 & 22 & 6 \\
+6 & 2830 & 96 & 10 \\
+7 & 38232 & 380 & 20 \\
+8 & 593859 & 1853 & 35 \\
+9 & 10401712 & 8510 & 70 \\
+10 & 202601898 & 44940 & 126 \\
+\hline
+OEIS & A000699 & A004300 & A001405 \\
+\hline
+    \end{tabular}
+\end{frame}
+
+\section{Полигональные пути, сборное число}
+
+\begin{frame}{Полигональный путь}
+    \begin{definition}
+    Полигональный путь --- путь $(v_0$, $e_1, v_1, e_2 ,\dots, e_n, v_n)$, что $e_i$ и $e_{i + 1}$ --- соседи для $v_i$ для $i \in \{1, \dots, n-1\}$.
+    \end{definition}
+    \centering
+    \includesvg[width=0.9\linewidth]{polygonal}
+\end{frame}
+
+\begin{frame}{Сборное число}
+    \begin{definition}
+    Сборное число простого сборного графа $\Gamma$ определяется как $\An(\Gamma) = \min\{k |$ существует гамильтоново множество полигональных путей $\{\gamma_1, \dots, \gamma_k\}$ в $\Gamma\}$.
+\end{definition}
+    \centering
+    \includesvg[width=0.7\linewidth]{an_1}
+\end{frame}
+
+\begin{frame}{Сборное число}
+Пример графа со сборным числом $3$.
+    \centering
+    \includesvg[width=\linewidth]{an_2}
+\end{frame}
+
+\begin{frame}{Реализуемость}
+\begin{definition}
+    Реализумый простой сборный граф --- простой сборный граф, со сборным числом $1$. Иначе --- нереализуемый.
+\end{definition}
+
+\begin{definition}
+    Минимальное реализующее число для натурального числа $n$ определяется как $R_{\min}(n) = \min\{|\Gamma|:\An(\Gamma) = n\}$. Граф $\Gamma$, такой что $R_{\min}(n) = |\Gamma|$, --- реализация $R_{\min}(n)$.
+\end{definition}
+
+\begin{proposition}
+Для любого натурального числа $n$ $R_{\min}(n) \leq 3n - 2$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}{Минимальное реализующее число палиндромов}
+\begin{definition}
+    Аналогично $R_{min}$ определим $R_{min}^P$ --- минимальное реализующее число палиндромов.
+\end{definition}    
+\begin{proposition}
+    В предположении, что $R_{min}(n) = 3n - 2$, $R_{min}^P$ совпадает с $R_{min}$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}{Реализуемость палиндромов и полупалиндромов}
+    \begin{proposition}
+    Не у всех полупалиндромов сборное число равно единице.
+    \end{proposition}
+    \centering
+    \includesvg[width=\linewidth]{an_sp}
+\end{frame}
+
+\begin{frame}{Минимальное реализующее число полупалиндромов}
+\begin{definition}
+    Аналогично $R_{min}$ определим $R_{min}^{SP}$ --- минимальное реализующее число полупалиндромов.
+\end{definition}
+\begin{proposition}
+    Для любого натурального $n$ $R_{min}^{SP}(n) \le 5n - 4$.
+\end{proposition}
+\end{frame}
+
+\begin{frame}{Минимальное реализующее число полупалиндромов}
+    \centering
+    \includesvg[width=0.8\linewidth]{an_sp_3}
+\end{frame}
+
+\section{Программа}
+\begin{frame}{Программа}
+    Была разработана библиотека на языке C++ для работы с 2-словами и представлении их в виде сборных графов.
+
+    Реализована функция \texttt{draw\_as\_graph}, использующая систему для визуализации графов Graphviz, которая изображает 2-слово в виде сборного графа.
+\end{frame}
+
+\begin{frame}{Визуализация}
+    \centering
+    \includesvg[width=\linewidth]{graph}
+\end{frame}
+
+\begin{frame}{Алгоритм для поиска сборного числа.}
+    Был реализован алгоритм для поиска сборного числа, имеющий асимптотику $\mathcal{O}(2^{2n} n \alpha(n))$, где $\alpha(n)$ --- обратная функция Аккермана. Такой асимптотики удалось добиться благодаря использованию структуры данных <<система непересекающихся множеств>>.
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Библиография}
+    \begin{thebibliography}{00}
+	\bibitem{article1}
+	A. Angeleska, N. Jonoska, M. Saito DNA recombinations through assembly graphs // Discrete Applied Mathematics. - 2009. - №157. - С. 3020-3037.
+
+	\bibitem{article2}
+	J. Burns, E. Dolzhenko, N. Jonoska, T. Muche, M. Saito Four-regular graphs with rigid vertices associated to DNA recombination // Discrete Applied Mathematics. - 2013. - №161. - С. 1378-1394.
+
+    \bibitem{article3}
+    А. Э. Гутерман, Е. М. Крейнес, Н. В. Остроухова 2-слова: их графы и матрицы // Записки научных семинаров ПОМИ. - 2019. - №482. - С. 45-72.
+
+    \bibitem{article4}
+    J. Touchard Sur un probleme de configurations et sur les fractions continues // Can. J. Math.. - 1952. - №4. - С. 2-25.
+    
+    \bibitem{article5}
+    R. R. Stein On a class of linked diagrams, I. Enumeration // Combin. Theory. - 1978. - №24. - С. 357-366.
+
+    \bibitem{article6}
+    A. Stoimenow On the number of chord diagrams // Disc. Math. - 2000. - №218. - С. 209-233.
+    
+    \end{thebibliography}
+\end{frame}
+
+\end{document}
