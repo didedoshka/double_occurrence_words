@@ -303,21 +303,44 @@ inline std::string get_data(const word_t& word, bool calculate_assembly_number =
 }
 
 // Expects double occurrence word
-inline void draw_as_graph(const word_t& word, std::string graph_name, bool calculate_assembly_number = true) {
+inline void draw_as_graph(const word_t& word, std::string graph_name, bool left_to_right = false,
+                          bool calculate_assembly_number = true) {
+    char north;
+    char south;
+    char west;
+    char east;
+    if (!left_to_right) {
+        north = 'n';
+        south = 's';
+        west = 'w';
+        east = 'e';
+    } else {
+        north = 'w';
+        south = 'e';
+        west = 's';
+        east = 'n';
+    }
     std::ofstream dot("data/" + graph_name + ".dot");
     dot << "digraph {\nfontname=\"Helvetica\"\nnode [fontname=\"Helvetica\"]\nnode [shape=diamond]\nlabel=\""
         << get_data(word, calculate_assembly_number, true) << "\"\n";
 
+    if (left_to_right) {
+        dot << "rankdir=\"LR\"\n";
+    }
     dot << "a [style=\"invis\"]\nb [style=\"invis\"]\n";
-    dot << "a";
-    dot << ":s";
+    dot << "a:";
+    dot << south;
     dot << " -> ";
 
     std::map<int, bool> m;
 
     bool w = true;
 
-    auto [an, an_v] = assembly_number(word);
+    int an;
+    std::vector<int> an_v;
+    if (calculate_assembly_number) {
+    std::tie(an, an_v) = assembly_number(word);
+    }
 
     for (int i = 0; i < std::ssize(word); ++i) {
         dot << word[i];
@@ -325,15 +348,15 @@ inline void draw_as_graph(const word_t& word, std::string graph_name, bool calcu
         dot << ":";
         if (m[word[i]]) {
             if (w) {
-                dot << "w";
+                dot << west;
             } else {
-                dot << "e";
+                dot << east;
             }
         } else {
-            dot << "n";
+            dot << north;
         }
 
-        if (std::find(an_v.begin(), an_v.end(), i - 1) != an_v.end()) {
+        if (calculate_assembly_number && std::find(an_v.begin(), an_v.end(), i - 1) != an_v.end()) {
             dot << " [color=\"blue\"]";
         }
 
@@ -344,13 +367,13 @@ inline void draw_as_graph(const word_t& word, std::string graph_name, bool calcu
         dot << ":";
         if (m[word[i]]) {
             if (w) {
-                dot << "e";
+                dot << east;
             } else {
-                dot << "w";
+                dot << west;
             }
             w = !w;
         } else {
-            dot << "s";
+            dot << south;
         }
 
         dot << " -> ";
@@ -358,7 +381,8 @@ inline void draw_as_graph(const word_t& word, std::string graph_name, bool calcu
         m[word[i]] = true;
     }
 
-    dot << "b:n\n";
+    dot << "b:";
+    dot << north << '\n';
     dot << "}\n";
     dot.close();
 

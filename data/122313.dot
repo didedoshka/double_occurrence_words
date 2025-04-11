@@ -1,0 +1,16 @@
+digraph {
+fontname="Helvetica"
+node [fontname="Helvetica"]
+node [shape=diamond]
+rankdir="LR"
+a [style="invis"]
+b [style="invis"]
+a:e -> 2:w [dir=back]
+2:e -> 1:w [dir=back]
+1:e -> 3:w [dir=back]
+3:e -> 3:s [dir=back]
+3:n -> 2:n [dir=back]
+2:s -> 1:s [dir=back]
+1:n -> b:w [dir=back]
+}
+

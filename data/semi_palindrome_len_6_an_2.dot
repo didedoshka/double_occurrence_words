@@ -7,14 +7,14 @@ a [style="invis"]
 b [style="invis"]
 a:s -> 1:n
 1:s -> 1:w
-1:e -> 2:n
+1:e -> 2:n [color="blue"]
 2:s -> 3:n
-3:s -> 4:n
+3:s -> 4:n [color="blue"]
 4:s -> 2:e
-2:w -> 5:n
+2:w -> 5:n [color="blue"]
 5:s -> 3:w
 3:e -> 4:e
-4:w -> 5:w
+4:w -> 5:w [color="blue"]
 5:e -> 6:n
 6:s -> 6:e
 6:w -> b:n

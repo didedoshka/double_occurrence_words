@@ -126,6 +126,16 @@ void check_recursive_semi_palindrome_test(const int N = 4) {
     }
 }
 
+void get_strongly_irreducible() {
+    word_t word = first_double_occurrence_word(7);
+    do {
+        int an = assembly_number(word).first;
+        if (an > 2) {
+            std::cout << word << " " << an << '\n';
+        }
+    } while (next_in_ascending_order(word));
+}
+
 int main() {
     // assembly_number_test();
     // minimal_realization_test();
@@ -135,8 +145,9 @@ int main() {
     // calculate_palindromes_test();
     // check_recursive_semi_palindrome_test(6);
     // draw_all_semi_palindromes_len(7);
+    // get_strongly_irreducible();
 
     word_t word;
     std::cin >> word;
-    draw_as_graph(word, "graph", true);
+    draw_as_graph(word, "graph", true, true);
 }

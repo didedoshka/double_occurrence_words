@@ -1,0 +1,21 @@
+graph {
+fontname="Helvetica"
+node [fontname="Helvetica"]
+node [shape=diamond]
+nodesep=0.7
+
+rankdir="LR"
+
+a:e -- 1:w
+1:e -- 2:w 
+2:e -- 2:s
+2:n -- 1:n
+1:s -- 4:w 
+4:e -- 3:w
+3:e -- 5:w 
+5:e -- 4:s
+4:n -- 3:n 
+3:s -- 5:s
+5:n -- b:n
+}
+
